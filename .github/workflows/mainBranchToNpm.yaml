@@ -32,8 +32,10 @@ jobs:
           node-version: 16.x
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm version patch -m "Bump to version %s" # This line bumps the version
-      - run: git push --follow-tags # This line pushes the version bump commit and tags to GitHub
+      - run: git config --global user.email "linhardt.michael@gmail.com"
+      - run: git config --global user.name "Michael Linhardt"
+      - run: npm version patch -m "Auto bump version to %s for NPM deploy CI"
+      - run: git push --follow-tags
       - run: npm publish
         env:
           NPM_AUTOMATION: ${{ secrets.NPM_AUTOMATION }}
