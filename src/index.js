@@ -4,6 +4,8 @@ class Application {
 	constructor (configs) {
 		this.app = express()
 		this.port = configs.port
+
+		this.start()
 	}
 
 	start () {
