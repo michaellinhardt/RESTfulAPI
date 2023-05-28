@@ -4,24 +4,10 @@
     "es2021": true,
     "node": true
   },
-  "globals": {
-    // "PUBLIC": true,
-    // "MS_SECOND": true,
-    // "MS_MINUTE": true,
-    // "MS_HOUR": true,
-    // "MS_DAY": true,
-    // "MS_WEEK": true,
-    // "MS_MONTH": true,
-    // "MS_YEAR": true
-  },
   "extends": [
     "zavatta"
   ],
   "rules": {
-    "mocha/max-top-level-suites": "off",
-    "mocha/no-top-level-hooks": "off",
-    "mocha/no-mocha-arrows": "off",
-    "mocha/no-exports": "off",
     "curly": "off",
     "semi": "warn",
     "no-tabs": "off",
