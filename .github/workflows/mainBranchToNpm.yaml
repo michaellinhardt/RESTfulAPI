@@ -35,7 +35,7 @@ jobs:
       - run: npm ci
       - run: git config --global user.email "linhardt.michael@gmail.com"
       - run: git config --global user.name "Michael Linhardt"
-      - run: npm version patch -m "Auto bump version to %s for NPM deploy CI"
+      - run: npm version patch -m "Auto bump version to %s - NPM deploy CI"
       - run: git push --follow-tags
       - run: npm publish
         env:
