@@ -31,13 +31,12 @@ jobs:
         with:
           node-version: 16.x
           registry-url: https://registry.npmjs.org/
+          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
       - run: npm ci
-      - run: git config --global user.email "linhardt.michael@gmail.com"
-      - run: git config --global user.name "Michael Linhardt"
+      - run: git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - run: git config --global user.name "github-actions[bot]"
       - run: npm version patch -m "Auto bump version to %s for NPM deploy CI"
       - run: git push --follow-tags
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this token doesnt need to be set, its auto filled by github
       - run: npm publish
         env:
           NPM_AUTOMATION: ${{ secrets.NPM_AUTOMATION }}
