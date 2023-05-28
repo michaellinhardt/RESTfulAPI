@@ -35,9 +35,9 @@ jobs:
       - run: git config --global user.email "linhardt.michael@gmail.com"
       - run: git config --global user.name "Michael Linhardt"
       - run: npm version patch -m "Auto bump version to %s for NPM deploy CI"
+      - run: git push --follow-tags
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this token doesnt need to be set, its auto filled by github
-      - run: git push --follow-tags
       - run: npm publish
         env:
           NPM_AUTOMATION: ${{ secrets.NPM_AUTOMATION }}
