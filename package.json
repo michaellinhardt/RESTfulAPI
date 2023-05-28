@@ -10,7 +10,7 @@
     "prod": "node dist/src/index.js",
     "lint": "npx eslint ./src",
     "knex": "babel-node node_modules/.bin/knex",
-    "mocha": "NODE_ENV=test npx mocha --recursive"
+    "test": "npx eslint ./src"
   },
   "repository": {
     "type": "git",
