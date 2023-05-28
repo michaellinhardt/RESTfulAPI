@@ -1,0 +1,41 @@
+{
+  "name": "@michaellinhardt/restfulapi",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "NODE_ENV=development npx nodemon ./src/index.js --exec babel-node",
+    "script": "NODE_ENV=development babel-node",
+    "build": "rm -rf dist ; npx babel src --out-dir dist --copy-files",
+    "prod": "node dist/src/index.js",
+    "lint": "npx eslint ./src",
+    "knex": "babel-node node_modules/.bin/knex",
+    "mocha": "NODE_ENV=test npx mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaellinhardt/npm-backend-restfulapi.git"
+  },
+  "author": "Michael Linhardt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaellinhardt/npm-backend-restfulapi/issues"
+  },
+  "homepage": "https://github.com/michaellinhardt/npm-backend-restfulapi#readme",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.0",
+    "babel-eslint": "^10.1.0",
+    "core-js": "^3.21.1",
+    "escope": "^4.0.0",
+    "eslint": "^8.10.0",
+    "eslint-config-zavatta": "^6.0.3"
+  },
+  "dependencies": {
+    "@michaellinhardt/restfulapi": "^1.0.0",
+    "express": "^4.18.2"
+  }
+}
