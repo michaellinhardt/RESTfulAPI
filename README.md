@@ -17,8 +17,14 @@ To set up the hook, create a file named pre-push in the .git/hooks directory of 
 Add the following line to the file pre-push:
 
 ```#!/bin/sh
-# Increment the patch version in package.json before each push
-npm version patch -m "Auto bump version to %s - pre-push hook"```
+
+# Get the name of the current branch
+current_branch=$(git symbolic-ref --short HEAD)
+
+# Only run npm version patch if the current branch is main
+if [ "$current_branch" = "main" ]; then
+  npm version patch -m "Auto bump version to %s - pre-push hook"
+fi```
 
 Save and close the file.
 
