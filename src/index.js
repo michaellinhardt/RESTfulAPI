@@ -1,20 +1,15 @@
-import express from 'express'
+process.env.NODE_ENV = process.env.NODE_ENV || 'development'
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
 
-class Application {
-	constructor (configs) {
-		this.app = express()
-		this.port = configs.port
+import { ImporterSuperclass } from './superclass'
 
-		this.start()
-	}
-
-	start () {
-		this.app.listen(this.port, () => {
-			console.log(`Server listening on port ${this.port}`)
-		})
+class Application extends ImporterSuperclass {
+	constructor () {
+		super()
+		console.log('i exist')
+		console.log(this.config.env)
 	}
 }
-
-process.stdout.write('Loading RESTful API Package...\n')
 
 export default Application
