@@ -12,6 +12,6 @@ class Application extends ImporterSuperclass {
 	}
 }
 
-console.debug('Backend RESTful API package loaded')
+console.debug('aaa')
 
 export default Application
