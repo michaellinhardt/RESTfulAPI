@@ -2,7 +2,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 
-import { ImporterSuperclass } from './superclass'
+import { ImporterSuperclass } from './superclass/index'
 
 class Application extends ImporterSuperclass {
 	constructor () {
@@ -11,5 +11,7 @@ class Application extends ImporterSuperclass {
 		console.log(this.config.env)
 	}
 }
+
+console.debug('Backend RESTful API package loaded')
 
 export default Application

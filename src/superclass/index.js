@@ -1,1 +1,1 @@
-export { ImporterSuperclass } from './importer.superclass'
+export { ImporterSuperclass } from './importer.superclass.js'
