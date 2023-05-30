@@ -22,7 +22,7 @@
     "url": "https://github.com/michaellinhardt/npm-backend-restfulapi/issues"
   },
   "homepage": "https://github.com/michaellinhardt/npm-backend-restfulapi#readme",
-  "description": "",
+  "description": "Backend RESTful API application",
   "devDependencies": {
     "@babel/cli": "^7.21.5",
     "@babel/core": "^7.22.1",
