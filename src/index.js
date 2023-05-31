@@ -8,7 +8,6 @@ class Application extends ImporterSuperclass {
 	constructor () {
 		super()
 		console.log('i exist')
-		console.log(this.config.env)
 	}
 }
 
