@@ -5,13 +5,13 @@
   "scripts": {
     "start": "NODE_ENV=development npx nodemon ./src/index.js --exec babel-node",
     "script": "NODE_ENV=development babel-node",
-    "build": "echo 'build npm' && rm -rf dist ; npx babel src --out-dir dist --copy-files",
+    "build": "rm -rf dist ; npx babel src --out-dir dist --copy-files",
     "prod": "node dist/src/index.js",
     "lint": "npx eslint ./src",
     "knex": "babel-node node_modules/.bin/knex",
     "test": "npx eslint ./src",
     "prepublishOnly": "npm run build",
-    "postinstall": "echo 'postinstall npm' && npm run build"
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
