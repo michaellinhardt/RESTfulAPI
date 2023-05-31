@@ -1,4 +1,4 @@
-// import * as packageHelpers from '@michaellinhardt/helpers'
+import * as packageHelpers from '@michaellinhardt/helpers'
 import * as packageConfig from '../config'
 
 export class ImporterSuperclass {
