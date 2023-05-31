@@ -1,21 +1,15 @@
 import * as packageHelpers from '@michaellinhardt/helpers'
 import * as packageConfig from '../config'
+import * as packageApis from '../apis'
 
 export class ImporterSuperclass {
 	constructor () {
-		this.mergePackageAndProjectObj('config', packageConfig, packageConfig.path.project.root)
-	}
+		const projectSrcFolder = packageConfig.path.project.src
+		const { getMergedNpmAndProjectObj } = packageHelpers.npm
 
-	mergePackageAndProjectObj (propertyName, packageObject, projectObjectPath) {
-		let projectObject = {}
-		try {
-			projectObject = require(projectObjectPath)
-
-		} catch (error) {
-			console.warn(`No project object found for ${propertyName} or it couldn't be loaded.`)
-		}
-
-		this[propertyName] = Object.assign({}, packageObject, projectObject)
+		this.config = getMergedNpmAndProjectObj('config', packageConfig, projectSrcFolder)
+		this.helpers = getMergedNpmAndProjectObj('helpers', packageHelpers, projectSrcFolder)
+		this.apis = getMergedNpmAndProjectObj('apis', packageApis, projectSrcFolder)
 	}
 }
 
