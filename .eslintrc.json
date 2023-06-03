@@ -4,12 +4,33 @@
     "es2021": true,
     "node": true
   },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6
+  },
+  "globals": {
+    "PUBLIC": true,
+    "MS_SECOND": true,
+    "MS_MINUTE": true,
+    "MS_HOUR": true,
+    "MS_DAY": true,
+    "MS_WEEK": true,
+    "MS_MONTH": true,
+    "MS_YEAR": true
+  },
   "extends": [
-    "zavatta"
+    "airbnb-base/legacy"
   ],
   "rules": {
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 1 }],
+    "semi": ["error", "never"],
+    "one-var": "off",
+    "strict": "off",
+    "class-methods-use-this": "off",
+    "padded-blocks": ["error", "always"],
+    "space-before-function-paren": ["error", "always"],
+    "eol-last": "error",
     "curly": "off",
-    "semi": "warn",
     "no-tabs": "off",
     "no-undef": "warn",
     "no-unused-vars": "warn",
@@ -23,7 +44,7 @@
     "max-len": [
       "warn",
       {
-        "code": 100
+        "code": 120
       }
     ],
     "no-sync": 0,

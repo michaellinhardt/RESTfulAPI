@@ -1,18 +1,13 @@
 {
   "name": "@michaellinhardt/restfulapi",
   "version": "1.0.10",
-  "main": "dist/index.js",
+  "description": "NPM Backend RESTful API",
+  "main": "src/index.js",
   "scripts": {
-    "prestart": "npm install @michaellinhardt/helpers",
-    "start": "NODE_ENV=development npx nodemon ./src/index.js --exec babel-node",
-    "script": "NODE_ENV=development babel-node",
-    "build": "rm -rf dist ; npx babel src --out-dir dist --copy-files",
-    "prod": "node dist/src/index.js",
+    "start": "NODE_ENV=prodction node ./src/index.js",
+    "dev": "NODE_ENV=development nodemon ./src/index.js",
     "lint": "npx eslint ./src",
-    "knex": "babel-node node_modules/.bin/knex",
-    "test": "npx eslint ./src",
-    "prepublishOnly": "npm run build",
-    "postinstall": "npm install @michaellinhardt/helpers && npm run build"
+    "test": "npx eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -24,22 +19,9 @@
     "url": "https://github.com/michaellinhardt/npm-backend-restfulapi/issues"
   },
   "homepage": "https://github.com/michaellinhardt/npm-backend-restfulapi#readme",
-  "description": "Backend RESTful API application",
-  "devDependencies": {
-    "@babel/cli": "^7.21.5",
-    "@babel/core": "^7.22.1",
-    "@babel/node": "^7.22.1",
-    "@babel/preset-env": "^7.22.2",
-    "@babel/register": "^7.21.0",
-    "babel-eslint": "^10.1.0",
-    "core-js": "^3.30.2",
-    "escope": "^4.0.0",
-    "eslint": "^8.41.0",
-    "eslint-config-zavatta": "^6.0.3"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "@michaellinhardt/helpers": "file:../npm-backend-helpers",
-    "express": "^4.18.2",
-    "regenerator-runtime": "^0.13.11"
+    "eslint": "^8.41.0",
+    "eslint-config-airbnb-base": "^15.0.0"
   }
 }

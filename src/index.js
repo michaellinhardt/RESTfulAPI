@@ -1,16 +1,7 @@
-process.env.NODE_ENV = process.env.NODE_ENV || 'development'
-import 'core-js/stable'
-import 'regenerator-runtime/runtime'
-
-import { ImporterSuperclass } from './superclass/index'
-
-class Application extends ImporterSuperclass {
+class Application {
 	constructor () {
-		super()
-		console.log('i exist')
+		console.log('npm-backend-restfulapi is running')
 	}
 }
-
-console.debug('aaa')
 
 export default Application
