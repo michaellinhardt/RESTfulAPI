@@ -9,15 +9,14 @@ export class ImporterSuperclass {
 
 		// this.config = {
 		// 	...packageConfig,
-
 		// }
 
 		const test = require('./../../src/config/index.js')
 		console.debug('test', test)
 
 		// this.config = getMergedNpmAndProjectObj('config', packageConfig, projectSrcFolder)
-		this.helpers = getMergedNpmAndProjectObj('helpers', packageHelpers, projectSrcFolder)
-		this.apis = getMergedNpmAndProjectObj('apis', packageApis, projectSrcFolder)
+		// this.helpers = getMergedNpmAndProjectObj('helpers', packageHelpers, projectSrcFolder)
+		// this.apis = getMergedNpmAndProjectObj('apis', packageApis, projectSrcFolder)
 	}
 }
 
